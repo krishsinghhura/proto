@@ -23,6 +23,8 @@ func main() {
 
 	r.POST("/verify", handlers.VerifyHandler)
 
+	r.POST("/gemini", handlers.FetchData)
+
 	err := r.Run(":8080")
 	if err != nil {
 		log.Fatalf("Server failed to start: %v", err)
